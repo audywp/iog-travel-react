@@ -96,6 +96,7 @@
         justify-content: space-around;
         h1{
           font-size: 22px;
+          color: #ddd;
         }
         i{
           font-size: 18px;
@@ -105,6 +106,13 @@
       .navigation{
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 60%;
+        i{
+          color: #ddd;
+          font-size: 18px;
+        }
       }
     }
     .right-side{

@@ -16,13 +16,12 @@ const Dashbord = function () {
         </div>
         <div className="navigation">
 
-          <Link to={'/'}><i className="fas fa-bus-alt"></i></Link>
+          <Link to={'/'}><i className="fas fa-tachometer-alt"></i></Link>
           <Link to={'/'}><i className="far fa-user"></i></Link>
-          <Link to={'/'}>Transaction</Link>
-          <Link to={'/'}>Agen</Link>
-          <Link to={'/'}>Bus</Link>
-          <Link to={'/'}>Dashboard</Link>
-          <Link to={'/'}>Schedules</Link>
+          <Link to={'/'}><i className="fas fa-dollar-sign"></i></Link>
+          <Link to={'/'}><i className="fas fa-users"></i></Link>
+          <Link to={'/'}><i className="fas fa-bus-alt"></i></Link>
+          <Link to={'/'}><i className="far fa-calendar-check"></i></Link>
 
         </div>
       </div>
