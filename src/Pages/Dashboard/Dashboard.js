@@ -1,10 +1,13 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import '../../styles/dashboard.scss'
+import Busess from '../Busess/Busess'
+
 
 const Dashbord = function () {
   return(
    <>
+    <Router>
    <div className="wrapper">
     <div className="admin">
       <div className="left-side">
@@ -25,15 +28,19 @@ const Dashbord = function () {
         </div>
       </div>
       <div className="right-side">
-        <div className="com">
-          
+        <div className="searchDashboard">
+          <div className="search">
+            <button type='submit' ><i className="fas fa-search"></i></button>
+            <input type="search" id='search' placeholder='Search' />
+          </div>
         </div>
-        <div className="chart">
-          
+        <div className="dashboardPlace">
+          <Busess />
         </div>
       </div>
     </div>
   </div>
+  </Router>
   </>
   )
 }
