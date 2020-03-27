@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import './dashboard.scss'
+import '../../styles/dashboard.scss'
 
 const Dashbord = function () {
   return(
@@ -10,8 +10,7 @@ const Dashbord = function () {
       <div className="left-side">
         <div className="logo">
 
-          <button type='button'><i className="fas fa-bars"></i></button>
-          <h1>IOG TRAVEL</h1>
+          <Link className='logo-iog' to={'/'}>IOG TRAVEL</Link>
 
         </div>
         <div className="navigation">
@@ -26,7 +25,9 @@ const Dashbord = function () {
         </div>
       </div>
       <div className="right-side">
-        <button type='button'><i className="far fa-user"></i></button>
+        <div className="com">
+          
+        </div>
         <div className="chart">
           
         </div>

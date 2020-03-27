@@ -3,6 +3,16 @@ $shadow: #dff9fb;
 $font-color: #0E1C20;
 
 .login {
+  button{
+    padding: 12px 35px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px black;
+    background: linear-gradient(to left, rgb(32, 82, 92), rgb(34, 74, 114));
+    color: white;
+    font-size: 18px;
+  }
   background-color: rgba(0, 0, 0, 0.2);
   height: 100vh;
   position: relative;
@@ -97,19 +107,15 @@ $font-color: #0E1C20;
           color: #0E1C20;
         }
       }
-
-      button{
-        padding: 12px 35px;
+      .register-btn, .login-btn{
         position: absolute;
+      }
+      .register-btn{
+        top: 110%;
+      }
+      .login-btn{
         top: 110%;
         right: 10%;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        box-shadow: 1px 1px 1px 1px black;
-        background: linear-gradient(to left, rgb(32, 82, 92), rgb(34, 74, 114));
-        color: white;
-        font-size: 18px;
       }
     }
   }

@@ -86,38 +86,55 @@
 
     .left-side{
       flex: 1;
-      border: 1px solid black;
+      box-shadow: 4px 1px 15px 1px black;
+      border-radius: 15px 0 0 15px;
+      
 
       .logo{
-        border: 1px solid black;
         height: 78px;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        h1{
-          font-size: 22px;
+        border-bottom: 2px solid #ddd;
+        .logo-iog{
+          text-decoration: none;
+          margin-right: 8px;
+          font-size: 24px;
           color: #ddd;
         }
-        i{
-          font-size: 18px;
-          padding: 5px 10px;
+
+        button{
+          border: none;
+          outline: none;
+          background: none;
+          
+          i{
+            font-size: 22px;
+            color: #ddd;
+            padding: 5px 10px;
+          }
         }
+        
       }
       .navigation{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 60%;
+        height: 70%;
+        margin-top: 40px;
         i{
           color: #ddd;
-          font-size: 18px;
+          font-size: 24px;
+        }
+        i:hover{
+          transform: scale(1.1);
         }
       }
     }
     .right-side{
       flex: 4;
-      border: 1px solid black;
+      
     }
   }
 }

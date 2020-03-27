@@ -1,0 +1,99 @@
+.App{
+  .navbar{
+    z-index: 10;
+    text-shadow: 1px 1px 2px black;
+    width: 75%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 40px;
+
+    button{
+      padding: 10px;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      i{
+        font-size: 18px;
+      }
+    }
+    button:hover{
+      transform: scale(1.1);
+    }
+    .logo{
+      display: flex;
+      width: 175px;
+      justify-content: space-between;
+      color: #ddd;
+      .toHome{
+        text-decoration: none;
+        p{
+          font-size: 32px;
+          color: #ddd;
+        }
+      }
+      button{
+        i{
+          color: #ddd;
+        }
+      }
+    }
+
+    .logout{
+      display: flex;
+      width: 175px;
+      justify-content: space-between;
+      align-items: center;
+
+      // .logoutThis, .loginThis{
+      //   position: absolute;
+      //   right: 40px;
+      //   opacity: 0;
+      //   padding: 12px;
+      //   font-size: 18px;
+      //   color:#ddd;
+      //   text-decoration: none;
+      //   z-index: -1;
+      // }
+
+      // .loginThis:hover{
+      //   opacity: 1;
+      // }
+
+      .button:hover{
+        opacity: 1;
+      }
+
+      .toDashboard{
+        text-decoration: none;
+        p{
+          font-size: 20px;
+          text-decoration: none;
+          color: #ddd;
+        }
+      }
+      button{
+        padding: 10px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        i{
+          font-size: 28px;
+          color: #ddd;
+        }
+      }
+
+      // button:hover{
+      //   opacity: 0;
+      // }
+    }
+  }
+  .navbar:hover{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 50px 50px;
+  }
+}
