@@ -17,8 +17,11 @@ class Busess extends Component {
   async componentDidMount() {
     const results = await axios.get(config.APP_BACKEND.concat('admin/').concat('bus'))
     const { data } = results.data
-    this.setState({ busess:data})
+    const { pageInfo } = results.data
+    this.setState({ busess:data, pageInfo})
     console.log(data)
+
+    
   }
 
 
@@ -30,36 +33,55 @@ class Busess extends Component {
       <div className="busess">
         <div className="lineWrap"></div>
         <div className="busess-no">
+          
         <h1>No.</h1>
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            {this.state.busess.map((bus,i) => {
+              return(
+                <li>
+                  {i + 1}
+                </li>
+              )
+            })}
           </ul>
         </div>
   
         <div className="busess-name">
           <h1>Name</h1>
           <ul>
-            <li>Damri</li>
-            <li>Amer</li>
-            <li>Udah</li>
-            <li>Malem</li>
-            <li>Woy</li>
+            {this.state.busess.map((bus, i) => {
+              return (
+                <li key={bus.id}>
+                  {bus.car_name}
+                </li>
+              )
+            })}
           </ul>
         </div>
-  
+        
+        <div className="busess-class">
+          <h1>Class</h1>
+          <ul>
+          {this.state.busess.map((bus, i) => {
+              return (
+                <li key={bus.id}>
+                  {bus.bus_class}
+                </li>
+              )
+            })}
+          </ul>
+        </div>    
+
         <div className="busess-sheets">
           <h1>Sheets</h1>
           <ul>
-            <h1></h1>
-            <li>20</li>
-            <li>22</li>
-            <li>25</li>
-            <li>15</li>
-            <li>30</li>
+          {this.state.busess.map((bus, i) => {
+              return (
+                <li key={bus.id}>
+                  {bus.bus_seat}
+                </li>
+              )
+            })}
           </ul>
         </div>
   
