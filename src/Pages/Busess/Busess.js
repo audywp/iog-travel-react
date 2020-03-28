@@ -1,79 +1,98 @@
-import React,{ useState, useEffect } from 'react'
-import Config from '../../utils/config'
+import React,{ Component } from 'react'
+import config from '../../utils/config'
 import './busess.scss'
 import Button from '../../Component/Button'
+import axios from 'axios'
 
-const Busess = () => {
+class Busess extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      busess: []
+    }
+
+  }
+
+  async componentDidMount() {
+    const results = await axios.get(config.APP_BACKEND.concat('admin/').concat('bus'))
+    const { data } = results.data
+    this.setState({ busess:data})
+    console.log(data)
+  }
 
 
-  return(
-    <>
-    <div className="busess">
-      <div className="lineWrap"></div>
-      <div className="busess-no">
-      <h1>No.</h1>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
+
+
+  render() {
+    return(
+      <>
+      <div className="busess">
+        <div className="lineWrap"></div>
+        <div className="busess-no">
+        <h1>No.</h1>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+  
+        <div className="busess-name">
+          <h1>Name</h1>
+          <ul>
+            <li>Damri</li>
+            <li>Amer</li>
+            <li>Udah</li>
+            <li>Malem</li>
+            <li>Woy</li>
+          </ul>
+        </div>
+  
+        <div className="busess-sheets">
+          <h1>Sheets</h1>
+          <ul>
+            <h1></h1>
+            <li>20</li>
+            <li>22</li>
+            <li>25</li>
+            <li>15</li>
+            <li>30</li>
+          </ul>
+        </div>
+  
+        <div className="options">
+          <h1>Options</h1>
+          <ul>
+            <li>
+              <i className="far fa-edit"></i>
+              <i className="far fa-trash-alt"></i>
+            </li>
+            <li>
+              <i className="far fa-edit"></i>
+              <i className="far fa-trash-alt"></i>
+            </li>
+            <li>
+              <i className="far fa-edit"></i>
+              <i className="far fa-trash-alt"></i>
+            </li>
+            <li>
+              <i className="far fa-edit"></i>
+              <i className="far fa-trash-alt"></i>
+            </li>
+            <li>
+              <i className="far fa-edit"></i>
+              <i className="far fa-trash-alt"></i>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div className="busess-name">
-        <h1>Name</h1>
-        <ul>
-          <li>Damri</li>
-          <li>Amer</li>
-          <li>Udah</li>
-          <li>Malem</li>
-          <li>Woy</li>
-        </ul>
-      </div>
-
-      <div className="busess-sheets">
-        <h1>Sheets</h1>
-        <ul>
-          <h1></h1>
-          <li>20</li>
-          <li>22</li>
-          <li>25</li>
-          <li>15</li>
-          <li>30</li>
-        </ul>
-      </div>
-
-      <div className="options">
-        <h1>Options</h1>
-        <ul>
-          <li>
-            <i className="far fa-edit"></i>
-            <i className="far fa-trash-alt"></i>
-          </li>
-          <li>
-            <i className="far fa-edit"></i>
-            <i className="far fa-trash-alt"></i>
-          </li>
-          <li>
-            <i className="far fa-edit"></i>
-            <i className="far fa-trash-alt"></i>
-          </li>
-          <li>
-            <i className="far fa-edit"></i>
-            <i className="far fa-trash-alt"></i>
-          </li>
-          <li>
-            <i className="far fa-edit"></i>
-            <i className="far fa-trash-alt"></i>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-    </>
-    
-  )
+      </>
+      
+    )
+  }
 }
 
 export default Busess

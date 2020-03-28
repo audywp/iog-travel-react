@@ -3,6 +3,8 @@ import {BrowserRouter as BR, Route, Switch, Link} from 'react-router-dom'
 import Login from './Pages/Login/Login'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import Navbar from './Component/Navbar'
+import NotFound from './Component/NotFound'
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -25,6 +27,7 @@ class App extends Component {
             </Route>
             <Route path='/roles' exact render={() => <Login />} />
             <Route path='/roles/dashboard' exact render={() => <Dashboard />} />
+            <Route component={NotFound} />
           </Switch>
           </div>
         </div>
