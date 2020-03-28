@@ -18,12 +18,12 @@ const Dashbord = function () {
         </div>
         <div className="navigation">
 
-          <Link to={'/'}><i className="fas fa-tachometer-alt"></i></Link>
-          <Link to={'/'}><i className="far fa-user"></i></Link>
-          <Link to={'/'}><i className="fas fa-dollar-sign"></i></Link>
-          <Link to={'/'}><i className="fas fa-users"></i></Link>
-          <Link to={'/'}><i className="fas fa-bus-alt"></i></Link>
-          <Link to={'/'}><i className="far fa-calendar-check"></i></Link>
+          <Link className='link-items' to={'/'}><p>Dashboard</p><i className="fas fa-tachometer-alt"></i></Link>
+          <Link className='link-items' to={'/'}><p>User</p><i className="far fa-user"></i></Link>
+          <Link className='link-items' to={'/'}><p>Transactions</p><i className="fas fa-dollar-sign"></i></Link>
+          <Link className='link-items' to={'/'}><p>Agen</p><i className="fas fa-users"></i></Link>
+          <Link className='link-items' to={'/'}><p>Bus</p><i className="fas fa-bus-alt"></i></Link>
+          <Link className='link-items' to={'/'}><p>Schedules</p><i className="far fa-calendar-check"></i></Link>
 
         </div>
       </div>

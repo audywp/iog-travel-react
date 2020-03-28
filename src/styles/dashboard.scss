@@ -51,6 +51,22 @@
         align-items: center;
         height: 70%;
         margin-top: 40px;
+        .link-items{
+          font-size: 18px;
+          text-decoration: none;
+          color: #ddd;
+          width: 75%;
+          padding:10px 15px;
+          border-radius: 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .link-items:hover{
+          background: rgba(230, 230, 230, 0.7);
+          color: #324452;
+          font-weight: 100px;
+        }
         i{
           color: #ddd;
           font-size: 24px;
