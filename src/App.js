@@ -4,14 +4,30 @@ import Login from './Pages/Login/Login'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import Navbar from './Component/Navbar'
 import NotFound from './Component/NotFound'
+import Bus from '././Component/Bus'
+import Alert from './Component/Alert'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dataDummy : ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8', 'user9', 'user10']
+      isLogin : false,
+      showModal : false
+    }
+
+    this.checkLogin = () => {
+      if ( localStorage.getItem('token') ) {
+        this.setState({
+          isLogin: true
+        })
+      } else {
+        this.setState({
+          isLogin: false
+        })
+      }
     }
   }
+
 
   render() {
     return(
@@ -19,14 +35,15 @@ class App extends Component {
       <BR>
         <div className="App">
           <div className="wrapper">
+            <Alert />
           <Navbar />
           <Switch>
-            <Route path='/' exact>
-              <Link to={`/roles/dashboard`}>Go to dashboard</Link> <br></br>
-              <Link to={'/roles'} >admin</Link>
+            <Route path='/' exact >
+              
             </Route>
-            <Route path='/roles' exact render={() => <Login />} />
-            <Route path='/roles/dashboard' exact render={() => <Dashboard />} />
+            <Route path='/roles' exact render={(props) => <Login { ...props } />} />
+            <Route path='/roles/dashboard' exact render={(props) => <Dashboard { ...props } />} />
+            <Route path='/bus/update' exact render={() => <Bus />} />
             <Route component={NotFound} />
           </Switch>
           </div>

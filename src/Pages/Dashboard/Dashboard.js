@@ -1,14 +1,20 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom'
 import '../../styles/dashboard.scss'
 import Busess from '../Busess/Busess'
 import Card from '../../Component/Card'
 
 
-const Dashbord = function () {
+const Dashbord = function (props) {
+
+  if (!localStorage.getItem('token')) {
+    props.history.push('/roles')
+  }
+
   return(
    <>
     <Router>
+      
       <div className="wrapper">
         <div className="admin">
           <div className="left-side">

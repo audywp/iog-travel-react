@@ -77,14 +77,10 @@
           color: #ddd;
         }
       }
-      button{
-        padding: 10px;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.6);
-        i{
-          font-size: 28px;
-          color: #ddd;
-        }
+      .logIn{
+        font-size: 16px;
+        color: #ddd;
+        text-decoration: none;
       }
 
       // button:hover{
