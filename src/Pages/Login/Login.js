@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import '../../styles/login.scss'
 import Button from '../../Component/Button'
-import Axios from 'axios'
+import axios from 'axios'
 import config from '../../utils/config'
 import Swal from 'sweetalert2'
 
@@ -17,14 +17,11 @@ class Login extends Component {
     }
     
     this.setUsername = (e) => {
-      
       this.setState({
         username: e.target.value
       })
     }
     this.setPassword = (e) => {
-      
-      
       this.setState({
         password: e.target.value
       })
@@ -34,10 +31,11 @@ class Login extends Component {
       e.preventDefault()
       let params = {
         username : this.state.username,
-        password : this.state.password
+        password : this.state.password,
       }
+      const endPoint = config.APP_BACKEND.concat('user/login')
       
-      const infoLogin = await Axios.post(config.APP_BACKEND.concat('user/login'), params)
+      const infoLogin = await axios.post(endPoint, params)
       console.log(infoLogin)
       if (infoLogin.data.success === true) {
         localStorage.setItem('token', infoLogin.data.token)
@@ -85,7 +83,7 @@ render(){
           </div>
           <div className="adminPassword">
             <label htmlFor="password">Password :</label>
-            <input onChange= { e=> this.setPassword (e)} type="password" id="password" name='password' />
+            <input onChange= { e => this.setPassword (e)} type="password" id="password" name='password' />
             <i className="fas fa-user-lock"></i>
           </div>
           <div className="button">

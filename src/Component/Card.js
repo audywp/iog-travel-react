@@ -11,7 +11,7 @@ export default class Card extends Component {
           <div className="card-body">
             <h1>Total</h1>
             <h1>{this.props.name}</h1>
-            <h2>8</h2>
+            <h2>{this.props.total}</h2>
           </div>
         </div>
       </>

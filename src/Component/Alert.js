@@ -33,8 +33,9 @@ export default class Alert extends Component {
         <div className='modal'>
           <div className="show-alert">
             <h1>You must login to access this feature!</h1>
-            <h2></h2>
+            
             <i className="fas fa-times"></i>
+            <h2>Access Denied</h2>
             <button>OK</button>
           </div>
         </div>

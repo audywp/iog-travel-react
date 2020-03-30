@@ -1,3 +1,8 @@
+
+
+
+
+
 .formUpdate{
   position: absolute;
   top: 0;
@@ -39,4 +44,20 @@
       margin-bottom: 20px;
     }
   }
+
+  .updateSubmit{
+    position: absolute;
+    bottom: 75px;
+    right: 31%;
+  }
+  .cancelUpdate{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    i{
+      font-size: 40px;
+      color: #ddd;
+    }
+  }
+  
 }
